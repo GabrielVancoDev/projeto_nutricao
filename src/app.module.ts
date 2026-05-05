@@ -6,9 +6,18 @@ import { PacienteModule } from './paciente/paciente.module';
 import { NutricionistaModule } from './nutricionista/nutricionista.module';
 import { AlimentacaoModule } from './alimentacao/alimentacao.module';
 import { OrientacaoModule } from './orientacao/orientacao.module';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [UsuarioModule, PacienteModule, NutricionistaModule, AlimentacaoModule, OrientacaoModule],
+  imports: [
+    UsuarioModule,
+    PacienteModule,
+    NutricionistaModule,
+    AlimentacaoModule,
+    OrientacaoModule,
+    MongooseModule.forRoot('mongodb://localhost:27017/nutricao'),
+    
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
