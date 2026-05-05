@@ -15,7 +15,8 @@ import { MongooseModule } from '@nestjs/mongoose';
     NutricionistaModule,
     AlimentacaoModule,
     OrientacaoModule,
-    MongooseModule.forRoot('mongodb://localhost:27017/nutricao'),
+    MongooseModule.forRoot('mongodb://localhost:27017/nutricao')
+    ,
     
   ],
   controllers: [AppController],

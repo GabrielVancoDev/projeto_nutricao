@@ -1,4 +1,17 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, Post, Body } from '@nestjs/common';
+import { PacienteService } from './paciente.service';
 
-@Controller('paciente')
-export class PacienteController {}
+@Controller('pacientes')
+export class PacienteController {
+  constructor(private readonly service: PacienteService) {}
+
+  @Post()
+  create(@Body() body: any) {
+    return this.service.create(body);
+  }
+
+  @Get()
+  findAll() {
+    return this.service.findAll();
+  }
+}
