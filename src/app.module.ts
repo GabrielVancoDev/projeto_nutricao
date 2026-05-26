@@ -7,7 +7,6 @@ import { NutricionistaModule } from './nutricionista/nutricionista.module';
 import { AlimentacaoModule } from './alimentacao/alimentacao.module';
 import { OrientacaoModule } from './orientacao/orientacao.module';
 import { MongooseModule } from '@nestjs/mongoose';
-
 @Module({
   imports: [
     UsuarioModule,
