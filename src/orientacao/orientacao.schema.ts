@@ -4,7 +4,7 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose'; // Importação 
 export class Orientacao {
   // Propriedades
   @(Prop()({ required: true }))
-  orientacao: string;
+  descricao: string;
 
   @(Prop()({ required: true }))
   data: Date;
