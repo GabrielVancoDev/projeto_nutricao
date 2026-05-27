@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
 import { NutricionistaService } from './nutricionista.service';
 
-@Controller('nutricionista')
+@Controller('nutricionistas')
 export class NutricionistaController {
   // Controlador para Nutricionistas
   constructor(private readonly service: NutricionistaService) {}
