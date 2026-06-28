@@ -14,6 +14,10 @@ export class UsuarioService {
     return this.usuarioModel.create(data);
   }
 
+  // Buscar por e-mail
+  async findByEmail(email: string) {
+    return this.usuarioModel.findOne({ email });
+  }
   async findAll() {
     return this.usuarioModel.find();
   }
